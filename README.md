@@ -192,7 +192,7 @@ dbt seed
 
 ## 🎓 Learning Resources
 
-This project is inspired by the excellent work of **[Darshil Parmar](https://grouplens.org/datasets/movielens/20m/)** and his comprehensive YouTube course:
+This project is inspired by the excellent work of **[Darshil Parmar](https://www.youtube.com/@DarshilParmar)** and his comprehensive YouTube course:
 
 🎥 **[Complete dbt Course on YouTube](https://www.youtube.com/watch?v=zZVQluYDwYY&t=6296s)**
 
