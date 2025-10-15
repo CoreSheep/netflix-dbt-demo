@@ -1,0 +1,84 @@
+models:
+  - name: dim_movies
+    description: 'Dimension table for movies'
+    columns:
+      - name: movie_id
+        description: 'Primary key for the movies table'
+        tests:
+          - not_null
+          - unique
+      - name: movie_title
+        description: 'Title of the movie'
+      - name: genre_array
+        description: 'Array of genres for the movie'
+      - name: genre
+        description: 'Genre of the movie'
+
+  - name: dim_users
+    description: 'Dimension table for users'
+    columns:
+      - name: user_id
+        description: 'Primary key for the users table'
+        tests:
+          - not_null
+          - unique
+  
+  - name: dim_tags
+    description: 'Dimension table for tags'
+    columns:
+      - name: tag_id
+        description: 'Primary key for the tags table'
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_genome_tags
+    description: 'Dimension table for genome tags'
+    columns:
+      - name: tag_id
+        description: 'Primary key for the genome tags table'
+        tests:
+          - not_null
+          - unique
+      - name: tag_name
+        description: 'Name of the genome tag'
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_genome_scores
+    description: 'Dimension table for genome scores'
+    columns:
+      - name: movie_id
+        description: 'Primary key for the genome scores table'
+        tests:
+          - not_null
+          - unique
+      - name: tag_id
+        description: 'Primary key for the genome tags table'
+        tests:
+          - not_null
+          - unique
+      - name: relevance
+        description: 'Relevance score for the genome tag'
+        tests:
+          - not_null
+  
+  - name: fact_ratings
+    description: 'Fact table for ratings'
+    columns:
+      - name: user_id
+        description: 'Foreign key referencing users table'
+        tests:
+          - not_null
+      - name: movie_id
+        description: 'Primary key for the movies table'
+        tests:
+          - not_null
+      - name: rating
+        description: 'Rating given by the user to the movie'
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0.5
+              max_value: 5.0
