@@ -48,11 +48,7 @@ Perfect for learning data modeling and analytics! 🎪
 
 ## 🖼️ Screenshots Gallery
 
-### 🎯 dbt Models & Lineage
-![dbt Models Overview](screenshots/dbt_models.png)
-*Beautiful data lineage showing how raw data flows through staging → dimensions → facts → marts*
-
-### 📚 Auto-Generated Documentation
+### 🎯 dbt Models & Lineage & 📚 Auto-Generated Documentation
 ![dbt Docs Server](screenshots/dbt_docs_server_screenshot.png)
 *Interactive documentation with column descriptions, tests, and lineage graphs*
 
